@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/aeda2021_p02_extra.dir/main.cpp.o CMakeFiles/aeda2021_p02_extra.dir/Tests/tests.cpp.o CMakeFiles/aeda2021_p02_extra.dir/Tests/veterinary.cpp.o CMakeFiles/aeda2021_p02_extra.dir/Tests/animal.cpp.o CMakeFiles/aeda2021_p02_extra.dir/Tests/zoo.cpp.o  -o ../Tests/aeda2021_p02_extra  lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a -lpthread 

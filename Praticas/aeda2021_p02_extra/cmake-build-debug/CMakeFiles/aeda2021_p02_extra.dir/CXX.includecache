@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/brod5/OneDrive/Faculdade/2 ano/1 semestre/AEDA/Praticas/aeda2021_p02_extra/Tests/animal.h
+veterinary.h
+/mnt/c/Users/brod5/OneDrive/Faculdade/2 ano/1 semestre/AEDA/Praticas/aeda2021_p02_extra/Tests/veterinary.h
+string
+-
+
+/mnt/c/Users/brod5/OneDrive/Faculdade/2 ano/1 semestre/AEDA/Praticas/aeda2021_p02_extra/Tests/veterinary.h
+string
+-
+
+/mnt/c/Users/brod5/OneDrive/Faculdade/2 ano/1 semestre/AEDA/Praticas/aeda2021_p02_extra/Tests/zoo.cpp
+zoo.h
+/mnt/c/Users/brod5/OneDrive/Faculdade/2 ano/1 semestre/AEDA/Praticas/aeda2021_p02_extra/Tests/zoo.h
+iostream
+-
+sstream
+-
+stdlib.h
+-
+
+/mnt/c/Users/brod5/OneDrive/Faculdade/2 ano/1 semestre/AEDA/Praticas/aeda2021_p02_extra/Tests/zoo.h
+animal.h
+/mnt/c/Users/brod5/OneDrive/Faculdade/2 ano/1 semestre/AEDA/Praticas/aeda2021_p02_extra/Tests/animal.h
+vector
+-
+
