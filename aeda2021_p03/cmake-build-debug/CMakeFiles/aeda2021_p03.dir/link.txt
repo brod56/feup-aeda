@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/aeda2021_p03.dir/main.cpp.o CMakeFiles/aeda2021_p03.dir/Tests/tests.cpp.o  -o aeda2021_p03  lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a -lpthread 
