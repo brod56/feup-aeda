@@ -1,0 +1,58 @@
+\hypertarget{classEdge}{}\doxysection{Edge$<$ N, E $>$ Class Template Reference}
+\label{classEdge}\index{Edge$<$ N, E $>$@{Edge$<$ N, E $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEdge_a04af8d96c1fa4a30ab019505f7ac5cfb}{Edge}} (\mbox{\hyperlink{classNode}{Node}}$<$ N, E $>$ $\ast$dest, E val)
+\item 
+bool \mbox{\hyperlink{classEdge_a6b7a4799cf646f225edc50c6af7ae8a5}{operator==}} (const \mbox{\hyperlink{classEdge}{Edge}} \&e2) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEdge_a5cf2dabe11874c6a7f3616f4f41d109b}\label{classEdge_a5cf2dabe11874c6a7f3616f4f41d109b}} 
+E {\bfseries value}
+\item 
+\mbox{\Hypertarget{classEdge_ab5fa3808e4ded64afdd244c78504f269}\label{classEdge_ab5fa3808e4ded64afdd244c78504f269}} 
+\mbox{\hyperlink{classNode}{Node}}$<$ N, E $>$ $\ast$ {\bfseries destination}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEdge_a04af8d96c1fa4a30ab019505f7ac5cfb}\label{classEdge_a04af8d96c1fa4a30ab019505f7ac5cfb}} 
+\index{Edge$<$ N, E $>$@{Edge$<$ N, E $>$}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge$<$ N, E $>$@{Edge$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+\mbox{\hyperlink{classEdge}{Edge}}$<$ N, E $>$\+::\mbox{\hyperlink{classEdge}{Edge}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ N, E $>$ $\ast$}]{dest,  }\item[{E}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create an edge with a destination and a value 
+\begin{DoxyParams}{Parameters}
+{\em dest} & -\/ points to the end node \\
+\hline
+{\em val} & -\/ edge value \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEdge_a6b7a4799cf646f225edc50c6af7ae8a5}\label{classEdge_a6b7a4799cf646f225edc50c6af7ae8a5}} 
+\index{Edge$<$ N, E $>$@{Edge$<$ N, E $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Edge$<$ N, E $>$@{Edge$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+bool \mbox{\hyperlink{classEdge}{Edge}}$<$ N, E $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEdge}{Edge}}$<$ N, E $>$ \&}]{e2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks if two edges are equal (same destination) 
+\begin{DoxyParams}{Parameters}
+{\em e2} & -\/ edge to compare to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+equality result 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Tests/graph.\+h\end{DoxyCompactItemize}

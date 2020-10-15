@@ -1,0 +1,148 @@
+\hypertarget{classGraph}{}\doxysection{Graph$<$ N, E $>$ Class Template Reference}
+\label{classGraph}\index{Graph$<$ N, E $>$@{Graph$<$ N, E $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGraph_a0a9c31dd3a7e565cc4595783f50fc1a9}{Graph}} ()
+\item 
+\mbox{\hyperlink{classGraph_ad85e4f7ca90170dda7fbe9ec4845ee64}{$\sim$\+Graph}} ()
+\item 
+\mbox{\hyperlink{classGraph}{Graph}} \& \mbox{\hyperlink{classGraph_ad01ae8094160ece0615c37909121c083}{add\+Node}} (const N \&inf)
+\item 
+\mbox{\hyperlink{classGraph}{Graph}} \& \mbox{\hyperlink{classGraph_a4567d93132c5ab24db565dd0d9ec9edd}{add\+Edge}} (const N \&begin, const N \&end, const E \&val)
+\item 
+\mbox{\hyperlink{classGraph}{Graph}} \& \mbox{\hyperlink{classGraph_ad31a81c4c37dc55834df5b58a38f108d}{remove\+Edge}} (const N \&begin, const N \&end)
+\item 
+E \& \mbox{\hyperlink{classGraph_abc562271f1c9690de6ae198986d91d2e}{edge\+Value}} (const N \&begin, const N \&end)
+\item 
+unsigned \mbox{\hyperlink{classGraph_af58259b27d8639207bcb617296442619}{num\+Edges}} () const
+\item 
+unsigned \mbox{\hyperlink{classGraph_a09a72a010a9c7a8e8e95d34a603489e6}{num\+Nodes}} () const
+\item 
+void \mbox{\hyperlink{classGraph_ab93d40815d8bacc5c069c2f092a7a4df}{print}} (std\+::ostream \&os) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGraph_a0a9c31dd3a7e565cc4595783f50fc1a9}\label{classGraph_a0a9c31dd3a7e565cc4595783f50fc1a9}} 
+\index{Graph$<$ N, E $>$@{Graph$<$ N, E $>$}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph$<$ N, E $>$@{Graph$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+\mbox{\hyperlink{classGraph}{Graph}}$<$ N, E $>$\+::\mbox{\hyperlink{classGraph}{Graph}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new graph without nodes \mbox{\Hypertarget{classGraph_ad85e4f7ca90170dda7fbe9ec4845ee64}\label{classGraph_ad85e4f7ca90170dda7fbe9ec4845ee64}} 
+\index{Graph$<$ N, E $>$@{Graph$<$ N, E $>$}!````~Graph@{$\sim$Graph}}
+\index{````~Graph@{$\sim$Graph}!Graph$<$ N, E $>$@{Graph$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Graph()}{~Graph()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+\mbox{\hyperlink{classGraph}{Graph}}$<$ N, E $>$\+::$\sim$\mbox{\hyperlink{classGraph}{Graph}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructs nodes of the graph 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGraph_a4567d93132c5ab24db565dd0d9ec9edd}\label{classGraph_a4567d93132c5ab24db565dd0d9ec9edd}} 
+\index{Graph$<$ N, E $>$@{Graph$<$ N, E $>$}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph$<$ N, E $>$@{Graph$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+\mbox{\hyperlink{classGraph}{Graph}}\& \mbox{\hyperlink{classGraph}{Graph}}$<$ N, E $>$\+::add\+Edge (\begin{DoxyParamCaption}\item[{const N \&}]{begin,  }\item[{const N \&}]{end,  }\item[{const E \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add edge beginning and ending at desired nodes. If nodes aren\textquotesingle{}t found or edge already exists, throws respective exception 
+\begin{DoxyParams}{Parameters}
+{\em begin} & -\/ begin node info \\
+\hline
+{\em end} & -\/ end node info \\
+\hline
+{\em val} & -\/ edge value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_ad01ae8094160ece0615c37909121c083}\label{classGraph_ad01ae8094160ece0615c37909121c083}} 
+\index{Graph$<$ N, E $>$@{Graph$<$ N, E $>$}!addNode@{addNode}}
+\index{addNode@{addNode}!Graph$<$ N, E $>$@{Graph$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+\mbox{\hyperlink{classGraph}{Graph}}\& \mbox{\hyperlink{classGraph}{Graph}}$<$ N, E $>$\+::add\+Node (\begin{DoxyParamCaption}\item[{const N \&}]{inf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds node to the graph. If it already exists, throws \mbox{\hyperlink{classNodeAlreadyExists}{Node\+Already\+Exists}} 
+\begin{DoxyParams}{Parameters}
+{\em inf} & -\/ node name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_abc562271f1c9690de6ae198986d91d2e}\label{classGraph_abc562271f1c9690de6ae198986d91d2e}} 
+\index{Graph$<$ N, E $>$@{Graph$<$ N, E $>$}!edgeValue@{edgeValue}}
+\index{edgeValue@{edgeValue}!Graph$<$ N, E $>$@{Graph$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{edgeValue()}{edgeValue()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+E\& \mbox{\hyperlink{classGraph}{Graph}}$<$ N, E $>$\+::edge\+Value (\begin{DoxyParamCaption}\item[{const N \&}]{begin,  }\item[{const N \&}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets value of the edge connecting two desired nodes. If begin node isn\textquotesingle{}t found or edge does not exist will throw adequate exception 
+\begin{DoxyParams}{Parameters}
+{\em begin} & -\/ begin node info \\
+\hline
+{\em end} & -\/ end node info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the value of the found edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_af58259b27d8639207bcb617296442619}\label{classGraph_af58259b27d8639207bcb617296442619}} 
+\index{Graph$<$ N, E $>$@{Graph$<$ N, E $>$}!numEdges@{numEdges}}
+\index{numEdges@{numEdges}!Graph$<$ N, E $>$@{Graph$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{numEdges()}{numEdges()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+unsigned \mbox{\hyperlink{classGraph}{Graph}}$<$ N, E $>$\+::num\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets number of edges the graph has \begin{DoxyReturn}{Returns}
+total number of edges (sum for each node) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a09a72a010a9c7a8e8e95d34a603489e6}\label{classGraph_a09a72a010a9c7a8e8e95d34a603489e6}} 
+\index{Graph$<$ N, E $>$@{Graph$<$ N, E $>$}!numNodes@{numNodes}}
+\index{numNodes@{numNodes}!Graph$<$ N, E $>$@{Graph$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{numNodes()}{numNodes()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+unsigned \mbox{\hyperlink{classGraph}{Graph}}$<$ N, E $>$\+::num\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets number of nodes the graph has \begin{DoxyReturn}{Returns}
+number of nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_ab93d40815d8bacc5c069c2f092a7a4df}\label{classGraph_ab93d40815d8bacc5c069c2f092a7a4df}} 
+\index{Graph$<$ N, E $>$@{Graph$<$ N, E $>$}!print@{print}}
+\index{print@{print}!Graph$<$ N, E $>$@{Graph$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+void \mbox{\hyperlink{classGraph}{Graph}}$<$ N, E $>$\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Output graph nodes and respective edges in the format \char`\"{} ( N\+O\+D\+E\+\_\+\+I\+N\+F\+O\mbox{[} E\+D\+G\+E\+\_\+\+D\+E\+S\+T E\+D\+G\+E\+\_\+\+V\+A\+L\mbox{]} ... ) ... \char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em os} & -\/ stream to output to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGraph_ad31a81c4c37dc55834df5b58a38f108d}\label{classGraph_ad31a81c4c37dc55834df5b58a38f108d}} 
+\index{Graph$<$ N, E $>$@{Graph$<$ N, E $>$}!removeEdge@{removeEdge}}
+\index{removeEdge@{removeEdge}!Graph$<$ N, E $>$@{Graph$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{removeEdge()}{removeEdge()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+\mbox{\hyperlink{classGraph}{Graph}}\& \mbox{\hyperlink{classGraph}{Graph}}$<$ N, E $>$\+::remove\+Edge (\begin{DoxyParamCaption}\item[{const N \&}]{begin,  }\item[{const N \&}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes edge connecting two desired nodes. If begin node isn\textquotesingle{}t found or edge does not exist, adequate exception is thrown 
+\begin{DoxyParams}{Parameters}
+{\em begin} & -\/ begin node info \\
+\hline
+{\em end} & -\/ end node info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the graph 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Tests/graph.\+h\end{DoxyCompactItemize}

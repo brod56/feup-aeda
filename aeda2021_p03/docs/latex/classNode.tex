@@ -1,0 +1,65 @@
+\hypertarget{classNode}{}\doxysection{Node$<$ N, E $>$ Class Template Reference}
+\label{classNode}\index{Node$<$ N, E $>$@{Node$<$ N, E $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNode_a1fbaab3441352f84edd144b0831dd9d4}{Node}} (N inf)
+\item 
+unsigned \mbox{\hyperlink{classNode_a208465c223a3a40246df65bb24c652ab}{get\+Num\+Edges}} () const
+\item 
+void \mbox{\hyperlink{classNode_a50c71243740fed1843ddfaf85490f6d6}{add\+Edge}} (const \mbox{\hyperlink{classEdge}{Edge}}$<$ N, E $>$ \&edge)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNode_a9834402cba51f94660829ff572469277}\label{classNode_a9834402cba51f94660829ff572469277}} 
+N {\bfseries info}
+\item 
+\mbox{\Hypertarget{classNode_a1c22be05a6ef698a4ccb0bd896440733}\label{classNode_a1c22be05a6ef698a4ccb0bd896440733}} 
+vector$<$ \mbox{\hyperlink{classEdge}{Edge}}$<$ N, E $>$ $>$ {\bfseries edges}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNode_a1fbaab3441352f84edd144b0831dd9d4}\label{classNode_a1fbaab3441352f84edd144b0831dd9d4}} 
+\index{Node$<$ N, E $>$@{Node$<$ N, E $>$}!Node@{Node}}
+\index{Node@{Node}!Node$<$ N, E $>$@{Node$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+\mbox{\hyperlink{classNode}{Node}}$<$ N, E $>$\+::\mbox{\hyperlink{classNode}{Node}} (\begin{DoxyParamCaption}\item[{N}]{inf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Create a node with a name 
+\begin{DoxyParams}{Parameters}
+{\em inf} & -\/ node name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNode_a50c71243740fed1843ddfaf85490f6d6}\label{classNode_a50c71243740fed1843ddfaf85490f6d6}} 
+\index{Node$<$ N, E $>$@{Node$<$ N, E $>$}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Node$<$ N, E $>$@{Node$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+void \mbox{\hyperlink{classNode}{Node}}$<$ N, E $>$\+::add\+Edge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEdge}{Edge}}$<$ N, E $>$ \&}]{edge }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add edge beginning at the node 
+\begin{DoxyParams}{Parameters}
+{\em edge} & -\/ to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNode_a208465c223a3a40246df65bb24c652ab}\label{classNode_a208465c223a3a40246df65bb24c652ab}} 
+\index{Node$<$ N, E $>$@{Node$<$ N, E $>$}!getNumEdges@{getNumEdges}}
+\index{getNumEdges@{getNumEdges}!Node$<$ N, E $>$@{Node$<$ N, E $>$}}
+\doxysubsubsection{\texorpdfstring{getNumEdges()}{getNumEdges()}}
+{\footnotesize\ttfamily template$<$class N , class E $>$ \\
+unsigned \mbox{\hyperlink{classNode}{Node}}$<$ N, E $>$\+::get\+Num\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get number of edges beginning at the node \begin{DoxyReturn}{Returns}
+number of edges 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Tests/graph.\+h\end{DoxyCompactItemize}

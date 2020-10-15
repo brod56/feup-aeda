@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/AEDA/Praticas/aeda2021_p03
+# Install script for directory: /home/bdmendes/Documents/Faculdade/2 ano/AEDA/aeda2021_p03
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
+  set(CMAKE_INSTALL_SO_NO_EXE "0")
 endif()
 
 # Is this installation the result of a crosscompile?
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/c/AEDA/Praticas/aeda2021_p03/cmake-build-debug/lib/googletest-master/cmake_install.cmake")
+  include("/home/bdmendes/Documents/Faculdade/2 ano/AEDA/aeda2021_p03/cmake-build-debug/lib/googletest-master/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/AEDA/Praticas/aeda2021_p03/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bdmendes/Documents/Faculdade/2 ano/AEDA/aeda2021_p03/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

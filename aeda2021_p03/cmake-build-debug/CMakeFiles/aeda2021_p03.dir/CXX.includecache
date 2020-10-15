@@ -514,7 +514,7 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/mnt/c/AEDA/Praticas/aeda2021_p03/Tests/graph.h
+/home/bdmendes/Documents/Faculdade/2 ano/AEDA/aeda2021_p03/Tests/graph.h
 iostream
 -
 vector
@@ -522,7 +522,7 @@ vector
 algorithm
 -
 
-/mnt/c/AEDA/Praticas/aeda2021_p03/Tests/tests.cpp
+/home/bdmendes/Documents/Faculdade/2 ano/AEDA/aeda2021_p03/Tests/tests.cpp
 gtest/gtest.h
 -
 gmock/gmock.h
@@ -530,5 +530,5 @@ gmock/gmock.h
 string
 -
 graph.h
-/mnt/c/AEDA/Praticas/aeda2021_p03/Tests/graph.h
+/home/bdmendes/Documents/Faculdade/2 ano/AEDA/aeda2021_p03/Tests/graph.h
 

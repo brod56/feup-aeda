@@ -73,7 +73,7 @@ TEST(test, c_InserirAresta){
     EXPECT_EQ(7, f.numEdges());
 }
 
-/*TEST(test, d_ValorAresta){
+TEST(test, d_ValorAresta){
     Graph<string,int> f;
     f.addNode("A");
     f.addNode("B");
@@ -110,9 +110,9 @@ TEST(test, c_InserirAresta){
         string str1 = "Node does not exist: F";
         EXPECT_EQ(str1, ostr1.str());
     }
-}*/
+}
 
-/*TEST(test, e_EliminarAresta){
+TEST(test, e_EliminarAresta){
     Graph<string,int> f;
     f.addNode("A");
     f.addNode("B");
@@ -153,9 +153,9 @@ TEST(test, c_InserirAresta){
     }
 
     EXPECT_EQ(6, f.numEdges());
-}*/
+}
 
-/*TEST(test, f_ImprimirGraph){
+TEST(test, f_ImprimirGraph){
     Graph<string,int> f;
     f.addNode("A");
     f.addNode("B");
@@ -175,9 +175,8 @@ TEST(test, c_InserirAresta){
     string str = "( A[ B 5] [ C 8] ) ( B[ D 9] ) ( C[ D 3] [ E 4] ) ( D[ E 2] [ B 11] ) ( E) ";
     cout << str.c_str()<<endl;
     EXPECT_EQ(str, ostr.str());
-}*/
+}
 
-/*
 TEST(test, g_OperadorSaida){
     Graph<string,int> f;
     f.addNode("A");
@@ -197,4 +196,4 @@ TEST(test, g_OperadorSaida){
     ostr << f;
     string str = "( A[ B 5] [ C 8] ) ( B[ D 9] ) ( C[ D 3] [ E 4] ) ( D[ E 2] [ B 11] ) ( E) ";
     EXPECT_EQ(str, ostr.str());
-}*/
+}
