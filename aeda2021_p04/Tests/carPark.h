@@ -11,6 +11,8 @@ public:
     string name;
     bool present;
     int frequency;
+    bool operator==(const InfoCard& i2) const;
+    bool operator<(const InfoCard& i2) const;
 };
 
 class CarPark {
@@ -36,6 +38,22 @@ public:
     void sortClientsByFrequency();
     void sortClientsByName();
     vector<string> clientsBetween(unsigned f1, unsigned f2);
+};
+
+class ClientDoesNotExist {
+public:
+    explicit ClientDoesNotExist(const string& name);
+    string getName();
+private:
+    string name;
+};
+
+class PositionDoesNotExist {
+public:
+    PositionDoesNotExist(unsigned position);
+    unsigned getPosition();
+private:
+    unsigned position;
 };
 
 #endif /*CARPARK_H_*/

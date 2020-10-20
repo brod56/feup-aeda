@@ -17,7 +17,7 @@ TEST(test, a_Search){
     EXPECT_EQ(-1, p1.clientPosition("Tiago Tavares"));
 }
 
-/*TEST(test, b_CarParkUse){
+TEST(test, b_CarParkUse){
     CarPark p1(10,20);
     p1.addClient("Joao Santos");
     p1.addClient("Pedro Morais");
@@ -48,7 +48,7 @@ TEST(test, a_Search){
         cout << "Caught Exception. Client does not exist: " << e.getName() << endl;
         EXPECT_EQ("Tiago Silva", e.getName());
     }
-}*/
+}
 
 TEST(test, c_SortByFrequency){
     CarPark p1(10,20);
@@ -156,7 +156,7 @@ TEST(test, e_SortByName){
     }
 }
 
-/*TEST(test, f_InfoClients){
+TEST(test, f_InfoClients){
     CarPark p1(10,20);
     p1.addClient("Joao Santos");
     p1.addClient("Pedro Morais");
@@ -181,4 +181,4 @@ TEST(test, e_SortByName){
         cout << "Caught Exception. Position does not exist:" << e.getPosition() << endl;
         EXPECT_EQ(6, e.getPosition());
     }
-}*/
+}

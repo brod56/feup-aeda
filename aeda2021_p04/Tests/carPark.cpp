@@ -35,19 +35,22 @@ unsigned CarPark::getNumClients() const
     return clients.size();
 }
 
-// TODO
 int CarPark::clientPosition(const string & name) const
 {
-    return -1;
+    return sequentialSearch(clients,InfoCard{name,false,0});
 }
 
-// TODO
 unsigned CarPark::getFrequency(const string &name) const
 {
-    return 0;
+    int position = clientPosition(name);
+    if (position != -1){
+        return clients.at(position).frequency;
+    }
+    else{
+        throw ClientDoesNotExist(name);
+    }
 }
 
-// TODO: to modify
 bool CarPark::addClient(const string & name)
 {
     if (clients.size() == numMaxClients) return false;
@@ -59,12 +62,11 @@ bool CarPark::addClient(const string & name)
     return true;
 }
 
-// TODO: to modify
 bool CarPark::removeClient(const string & name)
 {
-    for (vector<InfoCard>::iterator it = clients.begin(); it != clients.end(); it++)
+    for (auto it = clients.begin(); it != clients.end(); it++)
         if ( (*it).name == name ) {
-            if ( (*it).present == false ) {
+            if ( !(*it).present ) {
                 clients.erase(it);
                 return true;
             }
@@ -73,51 +75,57 @@ bool CarPark::removeClient(const string & name)
     return false;
 }
 
-// TODO: to modify
 bool CarPark::enter(const string & name)
 {
     if (freePlaces == 0) return false;
     int pos = clientPosition(name);
-    if (pos == -1) return false;
-    if (clients[pos].present == true) return false;
+    if (pos == -1 || clients[pos].present) return false;
     clients[pos].present = true;
+    clients.at(pos).frequency++;
     freePlaces--;
     return true;
 }
 
-// TODO: to modify
 bool CarPark::leave(const string & name)
 {
     int pos = clientPosition(name);
-    if (pos == -1) return false;
-    if (clients[pos].present == false) return false;
+    if (pos == -1 || !clients.at(pos).present) return false;
     clients[pos].present = false;
     freePlaces++;
     return true;
 }
 
 
-// TODO
 InfoCard CarPark::getClientAtPos(unsigned p) const
 {
-    InfoCard info;
-    return info;
+    if (p >= clients.size()){
+        throw PositionDoesNotExist(p);
+    }
+    return clients.at(p);
 }
 
-// TODO
 void CarPark::sortClientsByFrequency()
 {
+    insertionSort(clients);
 }
 
-// TODO
 void CarPark::sortClientsByName()
 {
+    auto comp = [](const InfoCard& c1, const InfoCard& c2){
+        return c1.name < c2.name;
+    };
+    std::sort(clients.begin(), clients.end(), comp);
 }
 
-// TODO
 vector<string> CarPark::clientsBetween(unsigned f1, unsigned f2)
 {
+    insertionSort(clients);
     vector<string> names;
+    for (const InfoCard& c: clients){
+        if (c.frequency >= f1 && c.frequency <= f2){
+            names.push_back(c.name);
+        }
+    }
     return names;
 }
 
@@ -126,4 +134,29 @@ vector<string> CarPark::clientsBetween(unsigned f1, unsigned f2)
 ostream & operator<<(ostream & os, const CarPark & cp)
 {
     return os;
+}
+
+bool InfoCard::operator==(const InfoCard &i2) const {
+    return name == i2.name;
+}
+
+bool InfoCard::operator<(const InfoCard &i2) const {
+    return frequency > i2.frequency
+    || (frequency == i2.frequency && name < i2.name);
+}
+
+string ClientDoesNotExist::getName() {
+    return name;
+}
+
+ClientDoesNotExist::ClientDoesNotExist(const string &name):
+    name(name){
+}
+
+unsigned PositionDoesNotExist::getPosition() {
+    return position;
+}
+
+PositionDoesNotExist::PositionDoesNotExist(unsigned position):
+    position(position) {
 }
