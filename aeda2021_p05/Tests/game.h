@@ -17,7 +17,7 @@ public:
     list<Kid> getKids() const;
     void setKids(const list<Kid>& l1);
     string write() const;
-    Kid& loseGame(string phrase);
+    Kid& loseGame(const string& phrase);
     list<Kid>& reverse();
     list<Kid> removeOlder(unsigned id);
     bool operator==(Game& g2);
