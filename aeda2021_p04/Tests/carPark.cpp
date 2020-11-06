@@ -129,10 +129,9 @@ vector<string> CarPark::clientsBetween(unsigned f1, unsigned f2)
     return names;
 }
 
-
-// TODO
 ostream & operator<<(ostream & os, const CarPark & cp)
 {
+    os << cp.getNumClients() << " clients, " << cp.getNumPlaces() << " places\n";
     return os;
 }
 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/aeda2021_p05.dir/main.cpp.o CMakeFiles/aeda2021_p05.dir/Tests/tests.cpp.o CMakeFiles/aeda2021_p05.dir/Tests/kid.cpp.o CMakeFiles/aeda2021_p05.dir/Tests/game.cpp.o  -o aeda2021_p05  lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a -lpthread 
