@@ -1,4 +1,0 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/mnt/c/Users/brod5/OneDrive/Faculdade/2 ano/1 semestre/AEDA/Praticas/aeda2021_p02_extra"
--- Configuring done
--- Generating done
--- Build files have been written to: /mnt/c/Users/brod5/OneDrive/Faculdade/2 ano/1 semestre/AEDA/Praticas/aeda2021_p02_extra/cmake-build-debug
