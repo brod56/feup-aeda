@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/aeda1819_ci1.dir/main.cpp.o CMakeFiles/aeda1819_ci1.dir/Tests/tests.cpp.o CMakeFiles/aeda1819_ci1.dir/Tests/Account.cpp.o CMakeFiles/aeda1819_ci1.dir/Tests/Bank.cpp.o CMakeFiles/aeda1819_ci1.dir/Tests/BankOfficer.cpp.o  -o aeda1819_ci1  lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a -lpthread 
