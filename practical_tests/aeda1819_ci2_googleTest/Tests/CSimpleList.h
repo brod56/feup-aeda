@@ -69,7 +69,14 @@ public:
 
 	void intercalar(const CSimpleList &lst) //Grupo 2 c)
 	{
-        // wip
+        CNode* currentLst1 = first;
+        CNode* currentLst2 = lst.first;
+        do {
+            auto* lst2Up = new CNode(currentLst2->data(),currentLst1->next());
+            currentLst1->setNext(lst2Up);
+            currentLst1 = lst2Up->next();
+            currentLst2 = currentLst2->next();
+        } while (currentLst2 != nullptr);
 	}
 
 	int zipar() //Grupo 2 d)
@@ -80,8 +87,7 @@ public:
 
 		while (current != nullptr){
             currentAux = currentAux->next();
-		    while (currentAux != nullptr &&
-		    currentAux->data() == current->data()){
+		    while (currentAux != nullptr && currentAux->data() == current->data()){
 		        counter++;
                 currentAux = currentAux->next();
 		    }

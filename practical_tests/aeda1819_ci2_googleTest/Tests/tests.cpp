@@ -110,7 +110,6 @@ TEST(test_2, test_b){
 }
 
 
-/*
 TEST(test_2, test_c){
 	CSimpleList l1, l2, l3;
 	l1.insert_end(1); l1.insert_end(2); l1.insert_end(3);
@@ -122,7 +121,6 @@ TEST(test_2, test_c){
 	l1.intercalar(l2); //l1.print();
 	EXPECT_EQ("1 6 6 7 2 8 7 3 8 4 5 ",l1.toStr());
 }
- */
 
 TEST(test_2, test_d){
 	CSimpleList l3;
