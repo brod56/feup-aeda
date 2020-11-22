@@ -17,6 +17,7 @@ public:
     bool getState() const { return state; }
     void changeState() { if (state==false) state=true; else state=false; }
     int getNVisits() const { return nVisits; }
+    void addVisit();
     friend ostream &operator << (ostream &os, Circle &c1);
 };
 
@@ -29,6 +30,7 @@ public:
     int move();
     int mostVisited();
     BinaryTree<Circle> &getGame() { return game; }
+    static BinaryTree<Circle>* makeTree(vector<int> points, vector<bool> states, size_t pos = 0);
 };
 
 #endif

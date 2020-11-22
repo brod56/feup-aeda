@@ -28,6 +28,7 @@ TEST(test_1, a_CreateDictionary){
     }
 }
 
+
 TEST(test_1, b_PrintDictionary){
     cout << "This test never fails! VERIFY information written in monitorr" << endl;
     EXPECT_TRUE(true);
@@ -43,6 +44,7 @@ TEST(test_1, b_PrintDictionary){
     f.close();
     d1.print();
 }
+
 
 TEST(test_1, c_SearchForDictionary){
     ifstream f;
@@ -94,6 +96,7 @@ TEST(test_1, d_CorrectDictionary){
         EXPECT_EQ("small long-tailed rodent mammal", d1.searchFor("squirrel"));
     }
 }
+
 
 TEST(test_2, a_InitiateGame){
     vector<int> points;
