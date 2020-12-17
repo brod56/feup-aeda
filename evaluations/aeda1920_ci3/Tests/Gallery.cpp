@@ -82,29 +82,73 @@ int Gallery::recordAvailablePainters() { //carrega a tabela de dispersao com Aut
 }
 
 double Gallery::totalSells() const {
-    return 0.0;
+    double total = 0.0;
+    for (const auto& a: authorRecords){
+        total += a.getTotalSells();
+    }
+    return total;
 }
 
 double Gallery::sellPaint(string a, string t) {
-    auto p = std::find_if(collection.begin(),collection.end(),[a,t](Paint* p){
-        return p->getAuthor() == a && p->getTitle() == t;
-    });
-    if (p == collection.end()) return 0.0;
-    collection.erase(p);
+
+    Paint* p = nullptr;
+    for (auto it = collection.begin(); it != collection.end(); ++it){
+        if ((*it)->getTitle() == t && (*it)->getAuthor() == a) {
+            p = *it;
+            collection.erase(it);
+            break;
+        }
+    }
+
+    if (p == nullptr) return 0.0;
+
     auto record = *authorRecords.find(AuthorRecord(a,0,0));
     authorRecords.erase(record);
-    authorRecords.insert(AuthorRecord(a,record.getAvailablePaints()-1,record.getTotalSells()+(*p)->getPrice()));
-    return (*p)->getPrice();
+    authorRecords.insert(AuthorRecord(a,record.getAvailablePaints()-1,record.getTotalSells()+p->getPrice()));
+    return p->getPrice();
 }
 
-//TODO
 vector<Paint*> Gallery::nBestExibition(int n, int maxPerYear) {  //escolhe as N mais caras pinturas, dos anos mais antigos, para realizar uma exposição
-    vector<Paint*> tmp;
-    return tmp;
+    std::vector<Paint*> v;
+    std::priority_queue<ExhibitionItem> tmpHeap = paintsToShow;
+
+    for(int curYear = 0, curYearRemaining = maxPerYear;!tmpHeap.empty() && n;){
+        Paint* p = tmpHeap.top().getPaint();
+        tmpHeap.pop();
+        if (p->getYear() == curYear){
+            if (curYearRemaining > 0){
+                v.push_back(p);
+                n--;
+                curYearRemaining--;
+            }
+        }
+        else {
+            curYear = p->getYear();
+            curYearRemaining = maxPerYear - 1;
+            v.push_back(p);
+            n--;
+        }
+    }
+
+    /* remove selected from queue */
+    tmpHeap = paintsToShow;
+    while (!paintsToShow.empty()) paintsToShow.pop();
+    while (!tmpHeap.empty()){
+        auto item = tmpHeap.top();
+        tmpHeap.pop();
+        if (std::find(v.begin(),v.end(),item.getPaint()) == v.end()) paintsToShow.push(item);
+    }
+
+    return v;
 }
 
-//TODO
 int Gallery::itemExibitionOrder(string a, string t) {
+    int pos = 0;
+    std::priority_queue<ExhibitionItem> tmpH = paintsToShow;
+    while (!tmpH.empty()){
+        pos++;
+        if (tmpH.top().getAuthor() == a && tmpH.top().getTitle() == t) return pos;
+        tmpH.pop();
+    }
     return 0;
 }
-

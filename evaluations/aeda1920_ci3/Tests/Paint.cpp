@@ -125,9 +125,7 @@ bool PaintCatalogItem::operator<(const PaintCatalogItem& pci) const {
     else return getTitle() < pci.getTitle();
 }
 
-
-//TODO
 bool ExhibitionItem::operator<(const ExhibitionItem& pci) const {
-    return true;
+    return getYear() != pci.getYear() ? getYear() > pci.getYear() : getPrice() < pci.getPrice();
 }
 

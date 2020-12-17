@@ -217,7 +217,6 @@ TEST(test, test_sellPaint) {
     EXPECT_EQ(g.getCollection().size(),3);
 }
 
-/*
 TEST(test, test_totalSells) {
     vector<Paint*> p1;
     p1.push_back(new Paint("a1", "t11", 1937, 200.00));
@@ -337,5 +336,3 @@ TEST(test, test_nBestExibition) {
         EXPECT_NEAR(paintsTS.top().getPrice(),20.00,0.01);
     }
 }
-
-*/
